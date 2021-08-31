@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 50vw;
+  overflow: hidden;
+}
+
+.bg-color {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.gameOver {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  z-index: 1;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  font-size: 28px;
+  transform: translateX(-50%);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.game-name {
+  position: absolute;
+  font: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 4%;
+}
+
+.game-rule {
+  position: absolute;
+  font: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+}
+.line {
+  width: 100vw;
+  height: 5px;
+  position: absolute;
+  bottom: 40%;
+  background: #7b7171;
+}
+
+.dino {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 40%;
+  height: 80px;
+  left: 80px;
+}
+
+.dino img {
+  height: 80px;
+}
+
+.bush {
+  position: absolute;
+  bottom: 40%;
+  right: 96px;
+}
+
+.bush img {
+  height: 32px;
+}
+
+.cactus {
+  position: absolute;
+  bottom: 40%;
+  right: -96px;
+}
+
+.cactus img {
+  height: 40px;
+}
+
+.pine {
+  position: absolute;
+  bottom: 40%;
+  right: -12rem;
+}
+
+.pine img {
+  height: 2.25rem;
+}
+
+.jumpDino {
+  animation: jump 0.5s linear;
+}
+
+.bush-comes {
+  animation: bush-ani 1.5s linear infinite;
+}
+
+.cactus-comes {
+  animation: cactus-ani 3s linear infinite;
+}
+
+.pine-comes {
+  animation: pine-ani 6s linear infinite;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 40%;
+  }
+  50% {
+    bottom: 60%;
+  }
+  100% {
+    bottom: 40%;
+  }
+}
+
+@keyframes bush-ani {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -10vw;
+  }
+}
+
+@keyframes cactus-ani {
+  0% {
+    left: 130vw;
+  }
+  100% {
+    left: -35vw;
+  }
+}
+
+@keyframes pine-ani {
+  0% {
+    left: 130vw;
+  }
+  100% {
+    left: -45vw;
+  }
+}
